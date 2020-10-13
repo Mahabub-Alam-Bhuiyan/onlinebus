@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <!--fontawesome link-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+   <!-- css link -->
+   <link rel="stylesheet" href="css/sb-style.css"> 
+   <!-- media css -->
+    <link rel="stylesheet" href="media/sb-media.css">
+   
+   <title>Bus Ticket Online/safetravel</title>
+  </head>
+  <body>
+      <!-- Header Navbar start -->
+    
+      <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="pic/newlogo.png" class="logo img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                  <a class="nav-link"  href="services.html" >Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+        </div>    
+        </nav>
+    </div>
+        
+    <!-- Header Navbar stop -->
+    <div id="emptyDiv">
+        <img src="pic/not_found.png" alt="not_found">
+    </div>
+    <!-- bus seat area -->
+
+    <section id="serch_bus">
+        <div class="container">
+            <div class="fare">
+                <div class="row ">
+                    <div class="col-sm-3 system">
+                        <h6>Operator</h6>
+                    </div> 
+                    <div class="col-sm-2 system">
+                        <h6>Dep. Time</h6>
+                    </div> 
+                    <div class="col-sm-2 system">
+                        <h6>Arr. Time</h6>
+                    </div> 
+                    <div class="col-sm-2 system">
+                        <h6>Seat available</h6>
+                    </div> 
+                    <div class="col-sm-3 system">
+                        <h6>Fare</h6>
+                    </div> 
+                </div>
+            </div>
+
+            <!-- bus available -->
+
+            <div class="bus-available accordion" id="accordionExample">
+                <div class="row ">
+                    <div class="col-sm-3 bus">
+                        <h4 class="bus_name">Hanif Enterprise</h4>
+                        <small class="bus_class">Hino 1J , Non AC</small><br>
+                        <small>Coach No. <span class="coach">250</span></small><br>
+                        <small>Route : <span class="route">Dhaka - Chittagong</span></small><br>
+                        <small>Starting Point : <i class="start">Dhaka</i></small><br>
+                        <small>Ending Point : <i class="end">Chiitagong</i></small>
+                    </div> 
+                    <div class="col-sm-2 col-md-2 bus">
+                        <h6>07:30 AM</h6>
+                    </div> 
+                    <div class="col-sm-2 col-md-2 bus">
+                        <h6>12:30 PM</h6>
+                    </div> 
+                    <div class="col-sm-2 col-md-2 bus">
+                        <h6 class="savailable">16</h6>
+                    </div> 
+                    <div class="col-sm-3 col-md-2 bus headingOne">
+                        <h6><span class="bus_fare">480</span> taka</h6>
+                         <button class="btn seat collapsed" id="0" onclick="fareManege(event)" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">View seats</button>
+                    </div> 
+                </div>
+            </div>
+             <!--CHILD  -->
+            <div id="collapseOne" class="collapse seat-area" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-sm-12">
+                            <span class="black"><i class="fas fa-chair"></i></span>Booked Seat<span class="white"><i class="fas fa-chair"></i></span>Available Seat<span class="tale"><i class="fas fa-chair"></i></span>Selected Seat
+                        </div>
+                    </div>
+                    <!-- left side -->
+                    <div class="row ">
+                        <div class="col-sm-6 ">
+                          <div class="seat-four">
+                              
+
+                            <span id="seat_number" class="1" title="A1">&nbsp&nbsp&nbsp</span><span id="seat_number" title="A1">&nbsp&nbsp</span>&nbsp&nbsp&nbsp&nbsp<span id="seat_number" title="A1">&nbsp&nbsp</span><span id="seat_number" title="A1"><i class="fab fa-creative-commons-nd"></i></span>
+                            <span id="seat_number" class="2" title="A1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="A2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="A3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="A4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="B1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="B2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="B3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="B4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="C1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="C2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="C3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="C4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="D1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="D2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="D3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="D4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="E1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="E2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="E3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="E4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="F1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="F2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="F3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="F4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="G1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="G2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="G3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="G4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="H1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="H2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="H3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="H4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+
+                              <!-- <div class="row"> -->
+                              <!-- left column 1-->  
+                              <!-- <div class="col-sm-6">                               -->
+                                <!-- <div class="float-left">
+                                    <div class="seat_number" title="" >&nbsp</div>
+                                    <div class="seat_number" title="A1" ><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="B1"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="C1"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="D1" ><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="E1"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="F1"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="G1" ><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="H1"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="I1"><i class="fas fa-chair"></i></div>
+                                </div>
+                                    left column 2-->
+                                   <!-- <div class="float-right">
+                                    <div class="seat_number" title="" >&nbsp</div>
+                                    <div class="seat_number" title="A2"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="B2"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="C2"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="D2" ><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="E2"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="F2"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="G2" ><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="H2"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="I2"><i class="fas fa-chair"></i></div>
+                                   </div>                                
+                                   </div> -->
+                                   <!--Right Column 1-->
+                                   <!-- <div class="col-sm-6">
+                                    <div class="float-left">
+                                    <div class="seat_number" title="" >&nbsp</div>
+                                    <div class="seat_number" title="A4"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="B4"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="C4"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="D4" ><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="E4"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="F4"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="G4" ><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="H4"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="I4"><i class="fas fa-chair"></i></div>
+                                    </div> -->
+                                    <!--Right Column 2-->
+                                   <!-- <div class="float-right">
+                                    <div class="seat_number" title="Driver" ><i class="fab fa-creative-commons-nd"></i></div>
+                                    <div class="seat_number" title="A3"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="B3"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="C3"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="D3" ><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="E3"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="F3"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="G3" ><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="H3"><i class="fas fa-chair"></i></div>
+                                    <div class="seat_number" title="I3"><i class="fas fa-chair"></i></div>
+                                   </div> -->
+                                   <!-- </div>  -->
+                                    
+                              </div>
+                           </div>
+                        
+                        <!-- right side -->
+                        <div class="col-sm-6">
+                            <div class="row ">
+                             <div class="col-sm-4 seatNumber">
+                                 <h3 class="fare-seat">Seat</h3>  
+                                 
+                             </div>
+                             <div class="col-sm-4 seatClass">
+                                 <h3 class="fare-seat">Class</h3> 
+                                 
+                             </div>
+                             <div class="col-sm-4 seatFare">
+                                    <h3 class="fare-seat">Fare</h3>
+                                    
+                             </div>
+                            </div>
+                            <div class="row">
+                             <div class="col-12 price_area">
+                                 <h2>Total Price : &nbsp</h2>
+                                 <input class=" btn_price totalPrice"></input>
+                             </div>
+                             <a href="user.html"> <button class="btn btn-success">Continue</button></a>
+                            </div>
+                         </div>
+ 
+                    </div>
+                    </div>
+                </div>
+            
+          <!-- section 2 -->
+                <div class="bus-available accordion" id="accordionExample">
+                    <div class="row">
+                        <div class="col-sm-3 bus">
+                            <h4 class="bus_name">Hanif Enterprise</h4>
+                            <small class="bus_class">Hino 1J , Non AC</small><br>
+                            <small>Coach No. <span class="coach">250</span></small><br>
+                            <small>Route : <span class="route">Dhaka - Chittagong</span></small><br>
+                            <small>Starting Point : <i class="start">Dhaka</i></small><br>
+                            <small>Ending Point : <i class="end">Chiitagong</i></small>
+                        </div> 
+                        <div class="col-sm-2 col-md-2 bus">
+                            <h6>09:00 AM</h6>
+                        </div> 
+                        <div class="col-sm-2 col-md-2 bus">
+                            <h6>02:30 PM</h6>
+                        </div> 
+                        <div class="col-sm-2 col-md-2 bus">
+                            <h6 class="savailable">10</h6>
+                        </div> 
+                        <div class="col-sm-3 col-md-2 bus headingTwo">
+                            <h6><span class="bus_fare">480</span> taka</h6>
+                            <button class="btn seat collapsed" id="1" onclick="fareManege(event)" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">View seats</button>
+                        </div> 
+                    </div>
+                </div>
+          
+            <!--CHILD  -->
+            <div id="collapseTwo" class="collapse seat-area" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-sm-12">
+                            <span class="black"><i class="fas fa-chair"></i></span>Booked Seat<span class="white"><i class="fas fa-chair"></i></span>Available Seat<span class="tale"><i class="fas fa-chair"></i></span>Selected Seat
+                        </div>
+                    <!-- left side -->
+                        <div class="col-sm-6 bus-seat">
+                          <div class="seat-four">
+                             
+                            
+                                                           
+                            <span id="seat_number" title="A1">&nbsp&nbsp&nbsp</span><span id="seat_number" title="A1">&nbsp&nbsp</span>&nbsp&nbsp&nbsp&nbsp<span id="seat_number" title="A1">&nbsp&nbsp</span><span id="seat_number" title="A1"><i class="fab fa-creative-commons-nd"></i></span>
+                            <span id="seat_number" title="A1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="A2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="A3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="A4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="B1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="B2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="B3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="B4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="C1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="C2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="C3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="C4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="D1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="D2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="D3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="D4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="E1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="E2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="E3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="E4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="F1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="F2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="F3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="F4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="G1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="G2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="G3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="G4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="H1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="H2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="H3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="H4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                                 
+                                    
+                              </div>
+                           </div>
+                      
+                        <!-- right side -->
+                        <div class="col-sm-6">
+                            <div class="row ">
+                             <div class="col-sm-4 seatNumber">
+                                 <h3 class="fare-seat">Seat</h3>  
+                                 
+                             </div>
+                             <div class="col-sm-4 seatClass">
+                                 <h3 class="fare-seat">Class</h3> 
+                                 
+                             </div>
+                             <div class="col-sm-4 seatFare">
+                                    <h3 class="fare-seat">Fare</h3>
+                                    
+                             </div>
+                            </div>
+                            <div class="row">
+                             <div class="col-12 price_area">
+                                 <h2>Total Price : &nbsp</h2>
+                                 <input class=" btn_price totalPrice"></input>
+                             </div>
+                             <a href="user.html" > <button class="btn btn-success" onclick="passTotalFare(event)">Continue</button></a>
+                            </div>
+                         </div>
+ 
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- section 3 -->
+            <div class="bus-available accordion" id="accordionExample">
+                <div class="row ">
+                    <div class="col-sm-3 bus">
+                        <h4 class="bus_name">Hanif Enterprise</h4>
+                        <small class="bus_class">Hino 1J , Non AC</small><br>
+                        <small>Coach No. <span class="coach">250</span></small><br>
+                        <small>Route : <span class="route">Dhaka - Chittagong</span></small><br>
+                        <small>Starting Point : <i class="start">Dhaka</i></small><br>
+                        <small>Ending Point : <i class="end">Chiitagong</i></small>
+                    </div> 
+                    <div class="col-sm-2 col-md-2 bus">
+                        <h6>10:30 AM</h6>
+                    </div> 
+                    <div class="col-sm-2 col-md-2 bus">
+                        <h6>04:00 PM</h6>
+                    </div> 
+                    <div class="col-sm-2 col-md-2 bus">
+                        <h6 class="savailable">32</h6>
+                    </div> 
+                    <div class="col-sm-3 col-md-2 bus headingThree">
+                        <h6><span class="bus_fare">480</span> taka</h6>
+                        <button class="btn seat collapsed" id="2" onclick="fareManege(event)" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">View seats</button>
+                    </div> 
+                </div>
+            </div>
+              <!--CHILD  -->
+            <div id="collapseThree" class="collapse seat-area" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-sm-12">
+                            <span class="black"><i class="fas fa-chair"></i></span>Booked Seat<span class="white"><i class="fas fa-chair"></i></span>Available Seat<span class="tale"><i class="fas fa-chair"></i></span>Selected Seat
+                        </div>
+                    <!-- left side -->
+                        <div class="col-sm-6 bus-seat">
+                          <div class="seat-four">
+
+                            <span id="seat_number" title="A1">&nbsp&nbsp&nbsp</span><span id="seat_number" title="A1">&nbsp&nbsp</span>&nbsp&nbsp&nbsp&nbsp<span id="seat_number" title="A1">&nbsp&nbsp</span><span id="seat_number" title="A1"><i class="fab fa-creative-commons-nd"></i></span>
+                            <span id="seat_number" title="A1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="A2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="A3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="A4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="B1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="B2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="B3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="B4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="C1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="C2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="C3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="C4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="D1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="D2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="D3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="D4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="E1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="E2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="E3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="E4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="F1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="F2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="F3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="F4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="G1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="G2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="G3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="G4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="H1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="H2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="H3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="H4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            
+                           </div>
+                        </div>
+                        <!-- right side -->
+                        <div class="col-sm-6">
+                            <div class="row ">
+                             <div class="col-sm-4 seatNumber">
+                                 <h3 class="fare-seat">Seat</h3>  
+                                 
+                             </div>
+                             <div class="col-sm-4 seatClass">
+                                 <h3 class="fare-seat">Class</h3> 
+                                 
+                             </div>
+                             <div class="col-sm-4 seatFare">
+                                    <h3 class="fare-seat">Fare</h3>
+                                    
+                             </div>
+                            </div>
+                            <div class="row">
+                             <div class="col-12 price_area">
+                                 <h2>Total Price : &nbsp</h2>
+                                 <input class=" btn_price totalPrice"></input>
+                             </div>
+                             <a href="user.html"> <button class="btn btn-success">Continue</button></a>
+                            </div>
+                         </div>
+ 
+
+                    </div>
+                </div>
+            </div> 
+            <!-- section 4 -->
+            <div class="bus-available accordion" id="accordionExample">
+                <div class="row ">
+                    <div class="col-sm-3 bus">
+                        <h4 class="bus_name">Hanif Enterprise</h4>
+                        <small class="bus_class">Hino 1J , Non AC</small><br>
+                        <small>Coach No. <span class="coach">250</span></small><br>
+                        <small>Route : <span class="route">Dhaka - Chittagong</span></small><br>
+                        <small>Starting Point : <i class="start">Dhaka</i></small><br>
+                        <small>Ending Point : <i class="end">Chiitagong</i></small>
+                    </div> 
+                    <div class="col-sm-2 col-md-2 bus">
+                        <h6>12:30 PM</h6>
+                    </div> 
+                    <div class="col-sm-2 col-md-2 bus">
+                        <h6>05:30 PM</h6>
+                    </div> 
+                    <div class="col-sm-2 col-md-2 bus">
+                        <h6 class="savailable">32</h6>
+                    </div> 
+                    <div class="col-sm-3 col-md-2 bus headingFour">
+                        <h6><span class="bus_fare">480</span> taka</h6>
+                         <button class="btn seat collapsed" id="3" onclick="fareManege(event)" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">View seats</button>
+                    </div> 
+                </div>
+            </div>
+             <!--CHILD  -->
+            <div id="collapseFour" class="collapse seat-area" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-sm-12">
+                            <span class="black"><i class="fas fa-chair"></i></span>Booked Seat<span class="white"><i class="fas fa-chair"></i></span>Available Seat<span class="tale"><i class="fas fa-chair"></i></span>Selected Seat
+                        </div>
+                    <!-- left side -->
+                        <div class="col-sm-6 bus-seat">
+                          <div class="seat-four">
+
+                            <span id="seat_number" title="A1">&nbsp&nbsp&nbsp</span><span id="seat_number" title="A1">&nbsp&nbsp</span>&nbsp&nbsp&nbsp&nbsp<span id="seat_number" title="A1">&nbsp&nbsp</span><span id="seat_number" title="A1"><i class="fab fa-creative-commons-nd"></i></span>
+                            <span id="seat_number" title="A1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="A2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="A3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="A4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="B1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="B2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="B3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="B4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="C1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="C2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="C3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="C4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="D1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="D2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="D3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="D4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="E1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="E2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="E3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="E4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="F1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="F2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="F3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="F4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="G1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="G2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="G3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="G4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="H1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="H2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="H3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="H4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            
+                           </div>
+                        </div>
+                        <!-- right side -->
+                        <div class="col-sm-6">
+                            <div class="row ">
+                             <div class="col-sm-4 seatNumber">
+                                 <h3 class="fare-seat">Seat</h3>  
+                                 
+                             </div>
+                             <div class="col-sm-4 seatClass">
+                                 <h3 class="fare-seat">Class</h3> 
+                                 
+                             </div>
+                             <div class="col-sm-4 seatFare">
+                                    <h3 class="fare-seat">Fare</h3>
+                                    
+                             </div>
+                            </div>
+                            <div class="row">
+                             <div class="col-12 price_area">
+                                 <h2>Total Price : &nbsp</h2>
+                                 <input class=" btn_price totalPrice"></input>
+                             </div>
+                             <a href="user.html"> <button class="btn btn-success">Continue</button></a>
+                            </div>
+                         </div>
+ 
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- section 5 -->
+         
+            <div class="bus-available accordion" id="accordionExample">
+                <div class="row ">
+                    <div class="col-sm-3 bus">
+                        <h4 class="bus_name">Hanif Enterprise</h4>
+                        <small class="bus_class">Hino 1J,Non AC</small><br>
+                        <small>Coach No. <span class="coach">250</span></small><br>
+                        <small>Route : <span class="route">Dhaka - Chittagong</span></small><br>
+                        <small>Starting Point : <i class="start">Dhaka</i></small><br>
+                        <small>Ending Point : <i class="end">Chiitagong</i></small>
+                    </div>  
+                    <div class="col-sm-2 col-md-2 bus">
+                        <h6>04:00 PM</h6>
+                    </div> 
+                    <div class="col-sm-2 col-md-2 bus">
+                        <h6>10:00 PM</h6>
+                    </div> 
+                    <div class="col-sm-2 col-md-2 bus">
+                        <h6 class="savailable">32</h6>
+                    </div> 
+                    <div class="col-sm-3 col-md-2 bus headingFive">
+                        <h6><span class="bus_fare">480</span> taka</h6>
+                        <button class="btn seat collapsed" id="4" onclick="fareManege(event)" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">View seats</button>
+                    </div> 
+                </div>
+            </div>
+             <!--CHILD  -->                
+             <div id="collapseFive" class="collapse seat-area" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-sm-12">
+                            <span class="black"><i class="fas fa-chair"></i></span>Booked Seat<span class="white"><i class="fas fa-chair"></i></span>Available Seat<span class="tale"><i class="fas fa-chair"></i></span>Selected Seat
+                        </div>
+                    <!-- left side -->
+                        <div class="col-sm-6 bus-seat">
+                          <div class="seat-four">
+
+                            <span id="seat_number" title="A1">&nbsp&nbsp&nbsp</span><span id="seat_number" title="A1">&nbsp&nbsp</span>&nbsp&nbsp&nbsp&nbsp<span id="seat_number" title="A1">&nbsp&nbsp</span><span id="seat_number" title="A1"><i class="fab fa-creative-commons-nd"></i></span>
+                            <span id="seat_number" title="A1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="A2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="A3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="A4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="B1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="B2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="B3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="B4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="C1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="C2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="C3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="C4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="D1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="D2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="D3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="D4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="E1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="E2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="E3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="E4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="F1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="F2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="F3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="F4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="G1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="G2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="G3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="G4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            <span id="seat_number" title="H1" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="H2" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>&nbsp&nbsp<span id="seat_number" title="H3" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span><span id="seat_number" title="H4" onclick="bookedHandle(event)"><i class="fas fa-chair"></i></span>
+                            
+                           </div>
+                        </div>
+                        <!-- right side -->
+                        <div class="col-sm-6">
+                           <div class="row ">
+                            <div class="col-sm-4 seatNumber">
+                                <h3 class="fare-seat">Seat</h3>  
+                                
+                            </div>
+                            <div class="col-sm-4 seatClass">
+                                <h3 class="fare-seat">Class</h3> 
+                                
+                            </div>
+                            <div class="col-sm-4 seatFare">
+                                   <h3 class="fare-seat">Fare</h3>
+                                   
+                            </div>
+                           </div>
+                           <div class="row">
+                            <div class="col-12 price_area">
+                                <h2>Total Price : &nbsp</h2>
+                                <input type="text" class=" btn_price totalPrice" value="0">
+                            </div>
+                            <a href="user.html"> <button class="btn btn-success">Continue</button></a>
+                           </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- bus seat area -->
+
+    <!-- seat area -->
+
+     <!-- footer 1  start-->
+<section id="footer1">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-4 col-sm-12 footer1-item">
+        <h3>safetravel</h3>
+        <p class="footer1-text">
+          safetravel.com is a premium online booking portal which allows you to purchase tickets for various bus services across the country.
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-12 footer1-item">
+        <h3>Company Info</h3>
+        <h6 class="foter-list"><a href="">Terms & Conditions</a></h6>
+        <h6 class="foter-list"><a href="">FAQ</a></h6>
+        <h6 class="foter-list"><a href="">Privacy & Policy</a></h6>
+        <h6 class="foter-list"><a href="">How To Buy Tickets</a></h6>
+      </div>
+      <div class="col-md-4 col-sm-12 footer1-item">
+        <h3>About safetravel</h3>
+        <h6 class="foter-list"><a href="about.html">About Us</a></h6>
+        <h6 class="foter-list"><a href="contact.html">Contact Us</a></h6>
+        <h6 class="foter-list"><a href="services.html">Services</a></h6>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- footer 1  stop-->
+<!--footer 2 start-->
+
+<section id="footer2">
+  <h5>© 2020 safetravel. All rights reserved.</h5>
+</section>
+
+<!-- footer 2 stop -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/searchbus.js"></script>
+    <script src="js/searchbusBooked.js"></script>
+</body>
+</html>
